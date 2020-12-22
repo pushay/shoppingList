@@ -5,7 +5,8 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.config.dev.js --open",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
     "test": "jest",
-    "lint": "lint-staged && pretty-quick --staged"
+    "lint": "lint-staged && pretty-quick --staged",
+    "deploy": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {
@@ -79,6 +80,8 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "mdb-ui-kit": "3.0.0"
+    "core-js": "^3.8.1",
+    "mdb-ui-kit": "3.0.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }

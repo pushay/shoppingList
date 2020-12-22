@@ -14,14 +14,15 @@ functions.default.countItems(list)
 const button = document.getElementById('buttonId')
 
 button.addEventListener("click", ()=> {
+  const localStorageList = functions.default.retrieveListFromLocalStorage()
   pair = functions.default.getForm();
 
   if (pair) {
-    list.push(pair)
+    localStorageList.push(pair)
     functions.default.clearList()
-    functions.default.createList(list);
-    functions.default.saveListOnLocalStorage(list)
-    functions.default.countItems(list)
+    functions.default.createList(localStorageList);
+    functions.default.saveListOnLocalStorage(localStorageList)
+    functions.default.countItems(localStorageList)
   }
 })
 document.getElementById('buttonId').setAttribute('disabled', 'true');
