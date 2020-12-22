@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Shopping List</title>
+    <link rel="icon" href="./img/note.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="preconnect"
+     href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+
+  <body>
+      <header style='height:6rem'>
+        <nav class="navbar bg-light d-flex p-4 nav">
+          <div class="container-fluid d-flex justify-content-center nav__container" >
+            <span class="nav__span navbar-brand mb-0 h1">Shopping List</span>
+          </div>
+        </nav>
+      </header>
+      <main class="section">
+        <div class="d-flex 
+        flex-column 
+        justify-content-center 
+        align-items-center p-2 
+        main">
+            <div class="main__counter" id="counterContainer">
+              <p class="main__counterText" id="counterId"></p>
+            </div>
+            <form class="d-flex p-5 
+            main__container main__container--form 
+            justify-content-between
+            align-items-center" 
+            method="POST"
+            id="formId"
+            >
+              <div class="form-outline main__inputContainer">
+                <input type="text"
+                onchange='window.formValidate()'
+                required
+                name="name"
+                id="form1" class="form-control
+                form-control-lg 
+                main__input" />
+                <label class="form-label" for="form1">name</label>
+              </div>
+              <div class="form-outline main__inputContainer">
+                <input type="number" id="form1" 
+                onchange='window.formValidate()'
+                name="quantity"
+                class="form-control 
+                form-control-lg 
+                main__input " />
+                <label class="form-label" for="form1">quantity</label>
+              </div>
+              <div class="d-flex justify-content-between 
+              main__radioContainer">
+                <div class="form-check">
+                  <input
+                    onchange='window.formValidate()'
+                    class="form-check-input"
+                    type="radio"
+                    value="kg"
+                    name="weight"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" 
+                  for="flexRadioDefault1">kg</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    onchange='window.formValidate()'
+                    class="form-check-input"
+                    type="radio"
+                    value="piece"
+                    name="weight"
+                    id="flexRadioDefault2"
+                  />
+                  <label class="form-check-label" 
+                  for="flexRadioDefault2">piece</label>
+                </div>
+              </div>
+              <div class="main__selectContainer">
+                <select class="main__select" 
+                onchange='window.formValidate()'
+                name="category">
+                  <option class="main__option"
+                  name='fruits' 
+                  value="fruits">fruits</option>
+                  <option class="main__option" 
+                  name='pastries'
+                  value="pastries">pastries</option>
+                  <option class="main__option" 
+                  name='hygieneProducts'
+                  value="hygieneProducts">hygiene products</option>
+                  <option class="main__option"
+                  name='meat'
+                  value="meat">meat</option>
+                  <option class="main__option"
+                  name='cleaningProducts' 
+                  value="cleaningProducts">cleaning products</option>
+                  <option class="main__option" 
+                  name='drinks'
+                  value="drinks">drinks</option>
+                  <option class="main__option" 
+                  name='clothes'
+                  value="clothes">clothes</option>
+                  <option class="main__option" 
+                  name='paperProducts'
+                  value="paperProducts">paper products</option>
+                  <option class="main__option"
+                  name='animalProducts' 
+                  value="animalProducts">animal products</option>
+                  <option class="main__option"
+                  name='electronics' 
+                  value="electronics">electronics</option>
+                </select>
+              </div>
+              <button type="button"
+              id="buttonId" 
+              class="btn main__button">Button</button>
+            </form>
+            <div class="d-flex p-0 
+            main__container 
+            main__container--shoppinglist"
+            id="shoppingListId"
+            >
+            </div>
+        </div>
+      </main>
+  </body>
+  <script type="text/javascript" src="js/index.min.js"></script>
+  <script type="text/javascript"></script>
+
+</html>

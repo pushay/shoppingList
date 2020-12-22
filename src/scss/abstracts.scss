@@ -1,0 +1,17 @@
+
+$primary-color:#457B9D;
+$secondary-color:#F1FAEE;
+$tertiary-color:#E63946;
+ 
+@mixin build($width, $height, $background-color){
+    width:$width;
+    height:$height;
+    background-color: $background-color;
+}
+
+@mixin flex($display, $flex-direction, $justify-content, $align-items){
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
